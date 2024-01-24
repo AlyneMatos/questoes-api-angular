@@ -1,0 +1,56 @@
+<mat-drawer-container class="sidebar-container" color="primary">
+  <mat-drawer mode="side" [opened]="isSidebarOpened" class="mat-drawer">
+
+    <div class="d-flex justify-content-end mt-2">
+      <button class="button-icon" mat-icon-button>
+        <mat-icon class="icon">close</mat-icon>
+      </button>
+    </div>
+
+    <div class=" container d-flex justify-content-center align-items-center vh-50">
+      <div class="text-center">
+        <img src="assets/perfil.png" alt="Foto de perfil" aria-label="Foto de perfil" class="img-fluid rounded-circle border border-5 mb-3">
+        <!-- aqui vai ser um nome de cada usuario -->
+        <h2>Maria Rochele
+        </h2>
+        <p>0 Questões hoje</p>
+      </div>
+    </div>
+
+    <mat-nav-list role="list" class="list-group" class="mb-6" >
+      <a mat-list-item routerLink="/questoes">
+        <mat-icon matListItemIcon  style="color: #0d6efd;">lists</mat-icon>
+        <span matListItemTitle>Banco de Questões</span>
+      </a>
+
+      <a mat-list-item routerLink="/lista">
+        <mat-icon matListItemIcon class="mat-20" class="icon" style="color: #0d6efd;">lists</mat-icon>
+        <span matListItemTitle>Gerar Lista de Questões</span>
+      </a>
+
+      <a mat-list-item >
+        <mat-icon matListItemIcon class="mat-20" class="icon" style="color: #0d6efd;">checkbook</mat-icon>
+        <span matListItemTitle routerLink="/#">Provas</span>
+      </a>
+
+      <a mat-list-item >
+        <mat-icon matListItemIcon class="mat-20" class="icon" style="color: #0d6efd;">rule</mat-icon>
+        <span matListItemTitle routerLink="/#">Simulados</span>
+      </a>
+
+      <a mat-list-item>
+        <mat-icon matListItemIcon class="mat-20" class="icon" style="color: #0d6efd;">show_chart</mat-icon>
+        <span matListItemTitle routerLink="/#">Estatística</span>
+      </a>
+
+      <a mat-list-item>
+        <mat-icon matListItemIcon class="mat-20" style="color: rgba(224, 192, 11, 0.863);">star</mat-icon>
+        <span matListItemTitle routerLink="/#">Seja Premium</span>
+      </a>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

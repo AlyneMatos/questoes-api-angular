@@ -1,0 +1,23 @@
+.mat-toolbar{
+  height: 70px;
+  background-color: #e9ecef;
+}
+img{
+  width: 160px;
+}
+.tbar {
+  z-index:5;
+  position:relative;
+}
+// .tbar {
+//   z-index:100;
+//   position:sticky;
+// }
+.spacer {
+  flex: 1 1 auto;
+}
+.perfil{
+  border-radius: 50px;
+  height: 45px;
+  width: 45px;
+}

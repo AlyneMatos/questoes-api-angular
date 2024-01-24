@@ -1,0 +1,94 @@
+<!-- <table mat-table [dataSource]="bancoQuestoes" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> Id </th>
+    <td mat-cell *matCellDef="let questao"> {{questao.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="enunciado">
+    <th mat-header-cell *matHeaderCellDef> Enunciado </th>
+    <td mat-cell *matCellDef="let questao"> {{questao.enunciado}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="itemCorreto">
+    <th mat-header-cell *matHeaderCellDef> Alternativa Correta </th>
+    <td mat-cell *matCellDef="let questao"> {{questao.itemCorreto}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="disciplina">
+    <th mat-header-cell *matHeaderCellDef> Disciplina </th>
+    <td mat-cell *matCellDef="let questao"> {{questao.conteudoQuestao.disciplina}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="assunto">
+    <th mat-header-cell *matHeaderCellDef> Conteúdo </th>
+    <td mat-cell *matCellDef="let questao"> {{questao.conteudoQuestao.assunto}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="dificuldade">
+    <th mat-header-cell *matHeaderCellDef> Dificuldade </th>
+    <td mat-cell *matCellDef="let questao"> {{questao.conteudoQuestao.dificuldade}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="banca">
+    <th mat-header-cell *matHeaderCellDef> Banca </th>
+    <td mat-cell *matCellDef="let questao"> {{questao.prova.banca}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="ano">
+    <th mat-header-cell *matHeaderCellDef> Ano </th>
+    <td mat-cell *matCellDef="let questao"> {{questao.prova.ano}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table> -->
+
+  <div class="carousel-content" class="p-3">
+    <mat-card *ngIf="currentQuestion" >
+      <mat-card-header>
+        <mat-card-title>Código: {{ currentQuestion.id }}</mat-card-title>
+        <mat-card-subtitle> {{currentQuestion.prova.banca}} | {{currentQuestion.prova.ano}}</mat-card-subtitle>
+        <mat-card-subtitle>{{ currentQuestion.conteudoQuestao.disciplina}} | {{ currentQuestion.conteudoQuestao.assunto }}</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <h4 class="m-4">{{ currentQuestion.enunciado }}</h4>
+
+        <section class="example-section">
+          <mat-radio-group [(ngModel)]="respostaSelecionada">
+            <div class="form-check">
+              <mat-radio-button value="a"> {{ currentQuestion.alternativas.a }}</mat-radio-button>
+            </div>
+            <div class="form-check">
+              <mat-radio-button value="b">{{ currentQuestion.alternativas.b }}</mat-radio-button>
+            </div>
+            <div class="form-check">
+              <mat-radio-button value="c">{{ currentQuestion.alternativas.c }}</mat-radio-button>
+            </div>
+            <div class="form-check">
+              <mat-radio-button value="d">{{ currentQuestion.alternativas.d }}</mat-radio-button>
+            </div>
+          </mat-radio-group>
+        </section>
+      </mat-card-content>
+
+      <mat-card-actions class="gap-2">
+        <button mat-button  mat-raised-button color="primary" (click)="verificarResposta() ">Responder</button>
+        <button mat-button mat-stroked-button color="primary">Item Correto</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <div class="d-flex justify-content-center">
+      <button mat-icon-button (click)="navigate(-1)" >
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+
+      <button mat-icon-button (click)="navigate(1)" >
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </div>
+  </div>
+
+
+
