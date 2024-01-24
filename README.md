@@ -1,25 +1,27 @@
-# EstudaFront
+# API de Questões de Vestibulares ✅
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+Esta API foi desenvolvida com o objetivo de proporcionar aos estudantes uma plataforma para resolver problemas de vestibulares, com foco especial na preparação para exames, como o vestibular da UECE.
 
-## Development server
+## 📝 Pré-requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Certifique-se de ter as seguintes ferramentas instaladas:
 
-## Code scaffolding
+- Node.js e npm para desenvolvimento Angular 16.
+- Java e Maven para desenvolvimento Spring Boot 3.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🔧 Configuração
 
-## Build
+### Frontend (Angular 16)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
+1. **Clone o Repositório:**
+   
+3. **Instalação de Dependências:**
+   ```bash
+   npm install
+   
+4. **Iniciar Aplicação Angular:**
+   ```bash
+   npm start
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
 ## Further help
